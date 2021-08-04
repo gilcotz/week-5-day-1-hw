@@ -15,7 +15,7 @@
 <body>
   <nav class="ct-nav">
     <div>
-      <img src="../static/ pictures/year.png" alt="New Year Sign">
+      <img src="../static/ pictures/logo.png" alt="car logo">
     </div>
 
     <div>
@@ -32,22 +32,22 @@
         <a href="">
           <li>Log Out</li>
         </a>
-        <a href="">
+        <a href="{{ url_for('auth.signin') }}">
           <li>Sign In</li>
         </a>
-        <a href="">
+        <a href="{{ url_for('auth.signup') }}">
           <li>Sign Up Free</li>
         </a>
       </ul>
     </div>
 
-
+</nav>
     <!-- End of Nav Items-->
 
     {% block content %}
     {% endblock content %}
 
-  </nav>
+  
 
 
 

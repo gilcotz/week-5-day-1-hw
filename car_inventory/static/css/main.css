@@ -1,3 +1,5 @@
+
+
 /* Nav Styles */
 .ct-nav{
   display: flex;
@@ -28,6 +30,7 @@ ul#horizontal-list{
   border: 2px solid red;
   border-radius: 11px;
   margin-right: 0.2vw;
+  
 }
 
 /*  End of Nav Styles */
@@ -35,11 +38,17 @@ ul#horizontal-list{
 /* Start of the Header/Hero Section */
 #header-text{
   padding: 2vw;
+  display: middle;
 }
 
 .header-image{
   width: 85%;
   max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  height: auto;
 }
 /* End of Header/Hero Section */
 
@@ -61,6 +70,7 @@ ul#horizontal-list{
   display: block;
   margin: auto;
   margin-bottom: 10vh;
+  max-width: 100%;
 }
 
 #features-section{
@@ -72,6 +82,7 @@ ul#horizontal-list{
   width: 50%;
   max-width: 75%;
   margin-left: 3vw;
+  
 }
 /* End of Community */
 /* Start of Footer */
@@ -82,8 +93,9 @@ ul#horizontal-list{
 }
 
 #newentry-logo{
-  width: 100%;
+  width: 500%;
   max-width: 100%
+
 }
 
 #footer{
