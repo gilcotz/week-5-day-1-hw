@@ -2,33 +2,54 @@
 {% block content %}
 
 <div class="container">
+  {% with messages = get_flashed_messages(with_categories= true) %}
+  {% if messages %}
+  {% for cat, msg in messages %}
+  {% if cat == 'user-created' %}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {{ msg }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% elif cat == 'auth-success' %}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {{ msg }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+</div>
+
+
+<div class="container">
   <header class="row">
     <div class="col-12 col-md-12 " id="header-text">
-      <h2>Help us, help you collecting your information</h2>
+      <h2>Help us, help you collect your information</h2>
       <h5>Help our developers create tools to steal your information.</h5>
       <div>
         <button class="btn btn-danger">See Our "Legit" page</button>
       </div>
-    </div> 
+    </div>
 
-<!-- header image here -->
-<div class="col-12 col-md-12">
+    <!-- header image here -->
+    <div class="col-12 col-md-12">
       <img src="../../static/ pictures/data-collection.jpg" alt="choose" class="header-image">
     </div>
-  </header> 
-<!-- header section ends -->
+  </header>
+  <!-- header section ends -->
 
-<!-- start of middle section -->
+  <!-- start of middle section -->
 
-<section class="row">
+  <section class="row">
     <div class="col-12" id="middle-text">
       <h2>Let us collect your information and sell it online!</h2>
       <p>With Your help we can get rich and you will receive unwanted spam emails, phone calls and more</p>
     </div>
   </section>
   <!-- end of middle section -->
-<!-- Start fo Features section -->
-<section class="row" id="features-section">
+  <!-- Start fo Features section -->
+  <section class="row" id="features-section">
     <div class="col-12 col-md-4">
       <img src="../../static/ pictures/old-school.jpg" alt="city driver" id="city-image">
       <h4>Our cars have the highest maintenance</h4>
@@ -40,7 +61,8 @@
       <img src="../../static/ pictures/broken.jpg" alt="connected Image" id="connect-image">
       <h4>Stay connected even when your car breaks</h4>
       <p>
-        All you wanted was a car right? Even if your car breaks we will in contact with you to charge you for our mistakes
+        All you wanted was a car right? Even if your car breaks we will in contact with you to charge you for our
+        mistakes
       </p>
     </div>
     <div class="col-12 col-md-4">
@@ -49,47 +71,47 @@
       <p>
         Why rely on device that needs to be charge, when you can have an unlimited battery-free paper map.
       </p>
-    </div> 
-<!-- </section>  -->
-<!-- end of features -->
-<!-- start of community -->
-<section class="row">
-    <div class="row div col-12 col-md-6 ">
-      <img src="../../static/ pictures/trusted.jpeg" alt="Location Image" id="location-image">
     </div>
-    <div class="col-12 col-md-6">
-      <h4>Talk with the most trusted developers online!</h4>
-      <p> Talk to the most trusted developers in the industry.
-        You will be able to talk to anyone about anything personal we do not judge!
-        As long your information will make us money at the end. 
-      </p>
-      <div>
-        <button class="btn btn-danger">View on kaohon</button>
-        <button class="btn btn-danger">Join our spam mail!</button>
+    <!-- </section>  -->
+    <!-- end of features -->
+    <!-- start of community -->
+    <section class="row">
+      <div class="row div col-12 col-md-6 ">
+        <img src="../../static/ pictures/trusted.jpeg" alt="Location Image" id="location-image">
       </div>
-    </div>
-  </section> 
-<!-- end of community -->
-<!-- start of footer -->
-<footer class="row" id="footer">
-    <div class="col-5 col-md-5">
-      <img src="../../static/ pictures/steal-info.jpeg" alt="New entry" id="newentry-logo">
-    </div>
-
-    <div class="col-2 col-md-2">
-      <div class="footer-text-flex">
-        <h4>Get to know our lies</h4>
-        <p>why give us your information?</p>
-        <p>The car "inventory" Project</p>
-        <p>We need more money than you</p>
-        <p>Involve other people</p>
-        <p>See our moral dignity</p>
-
+      <div class="col-12 col-md-6">
+        <h4>Talk with the most trusted developers online!</h4>
+        <p> Talk to the most trusted developers in the industry.
+          You will be able to talk to anyone about anything personal we do not judge!
+          As long your information will make us money at the end.
+        </p>
+        <div>
+          <button class="btn btn-danger">View on kaohon</button>
+          <button class="btn btn-danger">Join our spam mail!</button>
+        </div>
       </div>
-    </div>
+    </section>
+    <!-- end of community -->
+    <!-- start of footer -->
+    <footer class="row" id="footer">
+      <div class="col-5 col-md-5">
+        <img src="../../static/ pictures/steal-info.jpeg" alt="New entry" id="newentry-logo">
+      </div>
 
-  </footer>
-</div>  
+      <div class="col-2 col-md-2">
+        <div class="footer-text-flex">
+          <h4>Get to know our lies</h4>
+          <p>why give us your information?</p>
+          <p>The car "inventory" Project</p>
+          <p>We need more money than you</p>
+          <p>Involve other people</p>
+          <p>See our moral dignity</p>
+
+        </div>
+      </div>
+
+    </footer>
+</div>
 
 
 

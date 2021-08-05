@@ -3,7 +3,7 @@ from config import Config
 from .site.routes import site
 from .authentication.routes import auth
 from flask_migrate import Migrate
-from .models import db
+from .models import db, login_manager
 
 
 
@@ -15,4 +15,10 @@ app.register_blueprint(auth)
 
 db.init_app(app)
 
+login_manager.init_app(app)
+
+login_manager.login_view = 'signin'
+
 migrate = Migrate(app, db)
+
+from .models import User
